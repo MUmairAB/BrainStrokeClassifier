@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: BrainStrokeClassifier
+Version: 0.0.1
+Summary: A Brain Stroke Classfier that predicts whether you are vulnerable to brain stroke or not.
+Home-page: https://github.com/MUmairAB/BrainStrokeClassifier.git
+Author: Umair Akram
+License: UNKNOWN
+Keywords: stroke,brain stroke,brain stroke prediction,stroke prediction,umair akram,the umair akram,trained model,xgboost
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# BrainStrokeClassifier API
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
+[![Python 3.9](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+# Functionality of the BrainStrokeClassifier
+The package includes a trained Machine Learning model to predict Brain Stroke
+vulnerability. The model can be accessed as **BStClassifier** utility. You can use **BStClassifier.predict(X)** to make predictions. Where **X** is the input consisting of 7 characteristics:
+1. Gender ("Male", "Female", "Other")
+2. Age
+3. Do you have hypertension (Yes/NO)
+4. Do you have any heart disease (Yes/NO)
+5. What type of work you do? ("Private job", "Self Employed", "Govt. Job", "Never Worked", "You are a Child")
+6. Your average blood glucose level
+7. Your Body Mass Index (BMI)
+
+It classifies whether you are vulnerable to or had brain stroke, or not.
+ 
+## Input type
+The input can be:
+1. NumPy array
+         a. 1D array of shape (7,)
+         b. 2D array of shape (S,7); where S is number of samples
+2. Pandas Series of shape (7,)
+3. Pandas DataFrame of shape (S,7); where S is number of columns
+# About the Machine Learning model
+The Machine Learning model is a Pipeline of Strandard Scaler and XGBoost Classifier. You can check the notebook where the model is trained through the [github](https://github.com/MUmairAB/Stroke-Prediction-using-Machine-Learning/blob/a0c9126b4f8c55ea528b1f60354f441148173567/stroke-prediction.ipynb)
+
+# Package Installation
+Make sure you have Python installed in your system.
+Run Following command in the command window.
+ ```
+  pip install PyMusic-Player
+  ```
+# Example Code
+
+ ```
+# test.py
+
+
+# Package installation
+!pip install BrainStrokeClassifier
+
+# Loading package
+from BrainStrokeClassifier import BStClassifier
+import numpy as np
+import pandas as pd
+
+# Creating some test input
+
+x = np.array([[0,67,0,1,0,228.69,36.6],
+              [0,58,1,0,0,87.96,39.2]])
+
+df = pd.DataFrame(x)
+prediction = BStClassifier(df)
+print(prediction)
+ ```
+# For Suggestions
+**If you have any suggestions or improvements, please fork the package on [github](https://github.com/MUmairAB/BrainStrokeClassifier.git)**
+
