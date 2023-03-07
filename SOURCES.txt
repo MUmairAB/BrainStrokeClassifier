@@ -1,9 +1,0 @@
-LICENSE.txt
-README.md
-setup.py
-src/BrainStrokeClassifier.py
-src/BrainStrokeClassifier.egg-info/PKG-INFO
-src/BrainStrokeClassifier.egg-info/SOURCES.txt
-src/BrainStrokeClassifier.egg-info/dependency_links.txt
-src/BrainStrokeClassifier.egg-info/requires.txt
-src/BrainStrokeClassifier.egg-info/top_level.txt
